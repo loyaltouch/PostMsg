@@ -5,5 +5,10 @@
 </head>
 
 <body>
-<%= Kramdown::Document.new(@md).to_html%>
+<h1>file list</h1>
+<ul>
+  <% @files.each do |file| %>
+    <li><a href="<%= file %>"><%= file %></a></li>
+  <% end %>
+</ul>
 </body>
